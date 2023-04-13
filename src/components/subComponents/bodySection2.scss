@@ -1,0 +1,123 @@
+@import "../../styles/variables.scss";
+
+.service2-section {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 4rem 0;
+  }
+
+  .services-number {
+    display: flex;
+    width: 65rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .layer1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background-color: $primary-color;
+      border-radius: 100%;
+      font-family: $primary-font;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .layer2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+      border: 15px solid rgba(255, 77, 36, 0.7);
+    }
+
+    .layer3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      border: 15px solid rgba(255, 77, 36, 0.5);
+    }
+
+    .dash-line {
+      width: 18rem;
+      border: 1px dashed $primary-color;
+      opacity: 0.6;
+    }
+  }
+
+  .services-content {
+    display: flex;
+    width: 73rem;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    .service1 {
+      width: 15rem;
+      text-align: center;
+
+      .sub-head {
+        font-size: 25px;
+        color: $primary-color;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+        font-family: $secondary-font;
+        color: gray;
+      }
+    }
+  }
+
+  .service-list-container {
+    display: flex;
+    width: 66rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    .service-list-item {
+      width: 15rem;
+      background-color: $section-background;
+      border-radius: 6px;
+      .service-list-text {
+        padding: 16px;
+        margin-top: -4rem;
+
+        h1 {
+          font-family: $primary-font;
+          font-size: 24px;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+        p {
+          color: gray;
+          letter-spacing: 1px;
+          font-family: $secondary-font;
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        a {
+          color: $primary-color;
+          font-family: $secondary-font;
+          font-size: 16px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

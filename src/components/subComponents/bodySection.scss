@@ -1,0 +1,152 @@
+@import "../../styles/variables.scss";
+
+.services-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // position: absolute;
+  // top: 58rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+
+  .service-section {
+    display: flex;
+    width: 80rem;
+    justify-content: space-between;
+
+    .section {
+      width: 25rem;
+      // height: 26rem;
+      color: white;
+      background-color: $section-background;
+      border-radius: 1.5rem;
+      padding: 30px;
+
+      h2 {
+        font-family: $primary-font;
+        text-transform: uppercase;
+        padding: 8px 0;
+      }
+
+      .button {
+        width: 10rem;
+        height: 3rem;
+        border-radius: 4rem;
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding-inline: 18px;
+        opacity: 0.7;
+        margin: 2rem 0;
+
+        .text {
+          font-weight: 300;
+          letter-spacing: 1.5px;
+        }
+
+        .arrow {
+          width: 28px;
+          height: 28px;
+          background: white;
+          border-radius: 100%;
+          color: $primary-color;
+          padding-top: 5px;
+        }
+      }
+
+      .engine,
+      .gear,
+      .group {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .why-us-container {
+    width: 80rem;
+    // height: rem;
+    color: #fff;
+    display: flex;
+    margin-top: 6rem;
+    .why-us {
+      max-width: 20rem;
+      margin-right: 2.5rem;
+
+      h1 {
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 3rem;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      .button {
+        width: 10rem;
+        height: 3rem;
+        border-radius: 4rem;
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding-inline: 18px;
+        background-color: $primary-color;
+        opacity: 1;
+        margin: 2rem 0;
+
+        .text {
+          font-weight: 300;
+          letter-spacing: 1.5px;
+        }
+
+        .arrow {
+          width: 28px;
+          height: 28px;
+          background: white;
+          border-radius: 100%;
+          color: $primary-color;
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .why-us-text {
+      max-width: 52rem;
+      h1 {
+        width: fit-content;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #000;
+        cursor: pointer;
+        text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+        &.active {
+          color: $primary-color;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin: 20px 0;
+      }
+    }
+  }
+}

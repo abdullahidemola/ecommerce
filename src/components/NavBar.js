@@ -1,6 +1,7 @@
 import React from "react";
 import { ShoppingCart } from "phosphor-react";
 import Button from "../utilities/Button";
+import "./navbar.scss";
 const NavBar = () => {
   return (
     <>
@@ -9,25 +10,21 @@ const NavBar = () => {
           <h1>mechanic</h1>
         </div>
         <div className="navbar-elements">
-          <ul>
-            <li>home</li>
-            <li>service</li>
-            <li>about</li>
-            <li>store</li>
-            <li>blog</li>
-          </ul>
+          <div>
+            <span className="home">home</span>
+            <span>service</span>
+            <span>about</span>
+            <span>store</span>
+            <span>blog</span>
+          </div>
         </div>
         <div className="contact-section">
-          <ul>
-            <li>+234123456789</li>
-            <li>
-              <ShoppingCart size={32} weight="thin" />
-              <div className="cart-item">0</div>
-            </li>
-            <li>
-              <Button>Get an appointment</Button>
-            </li>
-          </ul>
+          <span className="number">+234123456789</span>
+          <div className="cart">
+            <ShoppingCart size={32} weight="thin" />
+            <p className="cart-item">0</p>
+          </div>
+          <Button>Get an appointment</Button>
         </div>
       </div>
     </>
