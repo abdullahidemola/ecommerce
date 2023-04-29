@@ -1,0 +1,90 @@
+@import "../../styles/variables.scss";
+
+.slider-container {
+  color: white;
+  width: 100%;
+  margin-bottom: 10rem;
+  margin-top: -18rem;
+
+  .slider-box {
+    position: relative;
+
+    .slider-section {
+      width: 90rem;
+      height: 30rem;
+      border: 1px solid $primary-color;
+      position: absolute;
+      border-radius: 10px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #000000;
+    }
+
+    .slider-content-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .img {
+        position: relative;
+        margin-right: 4rem;
+
+        img {
+          border-radius: 10px;
+          object-fit: cover;
+        }
+
+        .arrow {
+          position: absolute;
+          top: 50%;
+          cursor: pointer;
+        }
+
+        .arrow-left {
+          left: 0;
+        }
+
+        .arrow-right {
+          right: 0;
+          color: $primary-color;
+        }
+      }
+
+      .review-container {
+        max-width: 38rem;
+
+        h1 {
+          font-family: $primary-font;
+          text-transform: uppercase;
+          font-size: 40px;
+          font-weight: 700;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          font-family: $secondary-font;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.5;
+          margin-bottom: 2rem;
+        }
+
+        h3 {
+          font-family: $primary-font;
+          text-transform: uppercase;
+          color: $primary-color;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 12px;
+        }
+
+        .occupation {
+          color: $button-color;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
