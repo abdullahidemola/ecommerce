@@ -7,48 +7,44 @@ import guy from "../../images/specialists/GUY HAWKINS-p-500.jpg";
 import jacob from "../../images/specialists/Jacob Jones-p-500.jpg";
 import robert from "../../images/specialists/ROBERT FOX.jpg";
 const FaqSection = () => {
-  const [active1, setActive1] = useState(false);
-  const [active2, setActive2] = useState(false);
-  const [active3, setActive3] = useState(false);
-  const [active4, setActive4] = useState(false);
-  const [active5, setActive5] = useState(false);
-  const onclickHandler = (event) => {
+
+  const [active, setActive] = useState({
+    isActive1: false,
+    isActive2: false,
+    isActive3: false,
+    isActive4: false,
+    isActive5: false,
+  });
+
+  const onClickHandler = (event) => {
     if (event.target.className.includes("text1")) {
-      setActive1((prev) => !prev);
-      setActive2(false);
-      setActive3(false);
-      setActive4(false);
-      setActive5(false);
+      console.log("clicked");
+      const truthy = !active.isActive1;
+      setActive({ isActive1: truthy });
     }
+
     if (event.target.className.includes("text2")) {
-      setActive2((prev) => !prev);
-      setActive1(false);
-      setActive3(false);
-      setActive4(false);
-      setActive5(false);
+      console.log("clicked");
+      const truthy = !active.isActive2;
+      setActive({ isActive2: truthy });
     }
     if (event.target.className.includes("text3")) {
-      setActive3((prev) => !prev);
-      setActive2(false);
-      setActive1(false);
-      setActive4(false);
-      setActive5(false);
+      console.log("clicked");
+      const truthy = !active.isActive3;
+      setActive({ isActive3: truthy });
     }
     if (event.target.className.includes("text4")) {
-      setActive4((prev) => !prev);
-      setActive2(false);
-      setActive3(false);
-      setActive1(false);
-      setActive5(false);
+      console.log("clicked");
+      const truthy = !active.isActive4;
+      setActive({ isActive4: truthy });
     }
     if (event.target.className.includes("text5")) {
-      setActive5((prev) => !prev);
-      setActive2(false);
-      setActive3(false);
-      setActive4(false);
-      setActive1(false);
+      console.log("clicked");
+      const truthy = !active.isActive5;
+      setActive({ isActive5: truthy });
     }
   };
+
   return (
     <div className="faq-section-container">
       <div className="faq-section">
@@ -63,18 +59,18 @@ const FaqSection = () => {
         </div>
 
         <div className="fa-questions">
-          <div className="overlay" onClick={onclickHandler}>
+          <div className="overlay" onClick={onClickHandler}>
             <div className="text text1">
-              <p className={`${active1 ? "active" : " "}`}>
+              <p className={`${active.isActive1 ? "active" : " "}`}>
                 how long will you take to fix my car?
               </p>
-              <div className={`icon ${active1 ? "active" : " "}`}>
+              <div className={`icon ${active.isActive1 ? "active" : " "}`}>
                 <CaretCircleDown size={32} weight="thin" />
               </div>
             </div>
           </div>
 
-          {active1 && (
+          {active.isActive1 && (
             <div className="answer">
               Your car might need service for a multitude of reasons from any
               assortment of low fluids, worn brake linings, or component
@@ -87,18 +83,18 @@ const FaqSection = () => {
 
           <hr />
 
-          <div className="overlay" onClick={onclickHandler}>
+          <div className="overlay" onClick={onClickHandler}>
             <div className="text text2">
-              <p className={`${active2 ? "active" : " "}`}>
+              <p className={`${active.isActive2 ? "active" : " "}`}>
                 do i need to make an appoinment?
               </p>
-              <div className={`icon ${active2 ? "active" : " "}`}>
+              <div className={`icon ${active.isActive2 ? "active" : " "}`}>
                 <CaretCircleDown size={32} weight="thin" />
               </div>
             </div>
           </div>
 
-          {active2 && (
+          {active.isActive2 && (
             <div className="answer">
               Your car might need service for a multitude of reasons from any
               assortment of low fluids, worn brake linings, or component
@@ -111,18 +107,18 @@ const FaqSection = () => {
 
           <hr />
 
-          <div className="overlay" onClick={onclickHandler}>
+          <div className="overlay" onClick={onClickHandler}>
             <div className="text text3">
-              <p className={`${active3 ? "active" : " "}`}>
+              <p className={`${active.isActive3 ? "active" : " "}`}>
                 do u have a warranty?
               </p>
-              <div className={`icon ${active3 ? "active" : " "}`}>
+              <div className={`icon ${active.isActive3 ? "active" : " "}`}>
                 <CaretCircleDown size={32} weight="thin" />
               </div>
             </div>
           </div>
 
-          {active3 && (
+          {active.isActive3 && (
             <div className="answer">
               Your car might need service for a multitude of reasons from any
               assortment of low fluids, worn brake linings, or component
@@ -135,18 +131,18 @@ const FaqSection = () => {
 
           <hr />
 
-          <div className="overlay" onClick={onclickHandler}>
+          <div className="overlay" onClick={onClickHandler}>
             <div className="text text4">
-              <p className={`${active4 ? "active" : " "}`}>
+              <p className={`${active.isActive4 ? "active" : " "}`}>
                 do u complete auto restoration?
               </p>
-              <div className={`icon ${active4 ? "active" : " "}`}>
+              <div className={`icon ${active.isActive4 ? "active" : " "}`}>
                 <CaretCircleDown size={32} weight="thin" />
               </div>
             </div>
           </div>
 
-          {active4 && (
+          {active.isActive4 && (
             <div className="answer">
               Your car might need service for a multitude of reasons from any
               assortment of low fluids, worn brake linings, or component
@@ -159,18 +155,18 @@ const FaqSection = () => {
 
           <hr />
 
-          <div className="overlay" onClick={onclickHandler}>
+          <div className="overlay" onClick={onClickHandler}>
             <div className="text text5">
-              <p className={`${active5 ? "active" : " "}`}>
+              <p className={`${active.isActive5 ? "active" : " "}`}>
                 can u do a full technical inspection of the car
               </p>
-              <div className={`icon ${active5 ? "active" : " "}`}>
+              <div className={`icon ${active.isActive5 ? "active" : " "}`}>
                 <CaretCircleDown size={32} weight="thin" />
               </div>
             </div>
           </div>
 
-          {active5 && (
+          {active.isActive5 && (
             <div className="answer">
               Your car might need service for a multitude of reasons from any
               assortment of low fluids, worn brake linings, or component
