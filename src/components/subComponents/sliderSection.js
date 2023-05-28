@@ -10,7 +10,7 @@ const data = [
     occupation: "f1 racer",
     image: `${require("../../images/scroll/Kristin Watson.jpg")}`,
     review:
-      "It’s such a pleasure dealing with them. Everything is so convenient. They do the job efficiently, and timely, and charge exactly what they said they would. I stopped going to the dealership because I never got such good service from them. I was very happy with the work completed by Mechanic 128.",
+      "It’s such a pleasure dealing with them. Everything is so convenient. They do the job  efficiently, and timely, and charge exactly what they said they would. I stopped going to the dealership because I never got such good service from them. I was very happy with the work completed by Mechanic 128.",
   },
 
   {
@@ -32,9 +32,10 @@ const data = [
 const SliderSection = () => {
   return (
     <div className="slider-container">
+      <div className="gray-background"></div>
       <div className="slider-box">
         <div className="slider-section"></div>
-        <Customer customer={data}/>
+        <Customer customer={data} />
       </div>
     </div>
   );

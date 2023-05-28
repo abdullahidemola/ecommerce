@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import schedule from "../../images/services/Schedule.jpg";
 import engine from "../../images/services/Engine.jpg";
 import detailing from "../../images/services/Detailing.jpg";
 import painting from "../../images/services/Painting.jpg";
 
-import "./bodySection2.scss"
+import "./bodySection2.scss";
 
 const BodySection2 = () => {
-    return (
-      <div className="service2-section">
-        <h1>services</h1>
+  useEffect(() => {
+    console.log("I'm ran");
+    gsap.to(".resize", {
+      duration: 1,
+      scale: 1.2,
+      repeat: -1,
+      yoyo: true,
+    });
+  });
+ 
+  return (
+    <div className="service2-section">
+      <h1>services</h1>
 
+      <div className="element-container">
         <div className="services-number">
-          <div className="layer3">
+          <div className="layer3 resize">
             <div className="layer2">
               <div className="layer1">1</div>
             </div>
@@ -20,7 +32,7 @@ const BodySection2 = () => {
 
           <hr className="dash-line" />
 
-          <div className="layer3">
+          <div className="layer3 resize">
             <div className="layer2">
               <div className="layer1">2</div>
             </div>
@@ -28,7 +40,7 @@ const BodySection2 = () => {
 
           <hr className="dash-line" />
 
-          <div className="layer3">
+          <div className="layer3 resize ma">
             <div className="layer2">
               <div className="layer1">3</div>
             </div>
@@ -59,61 +71,62 @@ const BodySection2 = () => {
             </p>
           </div>
         </div>
-        <div className="service-list-container">
-          <div className="service-list-item">
-            <img src={schedule} alt="" />
+      </div>
+      <div className="service-list-container">
+        <div className="service-list-item">
+          <img src={schedule} alt="" />
 
-            <div className="service-list-text">
-              <h1>schedule</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                voluptatibus.
-              </p>
-              <a href="#">learn more</a>
-            </div>
+          <div className="service-list-text">
+            <h1>schedule</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
+              voluptatibus.
+            </p>
+            <a href="#">learn more</a>
           </div>
+        </div>
 
-          <div className="service-list-item">
-            <img src={engine} alt="" />
+        <div className="service-list-item">
+          <img src={engine} alt="" />
 
-            <div className="service-list-text">
-              <h1>engine</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident, et.
-              </p>
-              <a href="#">learn more</a>
-            </div>
+          <div className="service-list-text">
+            <h1>engine</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Provident, et.
+            </p>
+            <a href="#">learn more</a>
           </div>
+        </div>
 
-          <div className="service-list-item">
-            <img src={painting} alt="" />
+        <div className="service-list-item">
+          <img src={painting} alt="" />
 
-            <div className="service-list-text">
-              <h1>painting</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                magni?
-              </p>
-              <a href="#">learn more</a>
-            </div>
+          <div className="service-list-text">
+            <h1>painting</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
+              magni?
+            </p>
+            <a href="#">learn more</a>
           </div>
+        </div>
 
-          <div className="service-list-item">
-            <img src={detailing} alt="" />
+        <div className="service-list-item">
+          <img src={detailing} alt="" />
 
-            <div className="service-list-text">
-              <h1>detailing</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium, nobis.
-              </p>
-              <a href="#">learn more</a>
-            </div>
+          <div className="service-list-text">
+            <h1>detailing</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, nobis.
+            </p>
+            <a href="#">learn more</a>
           </div>
         </div>
       </div>
-    );
-}
- 
+    </div>
+  );
+};
+
 export default BodySection2;

@@ -15,85 +15,105 @@
     margin: 4rem 0;
   }
 
-  .services-number {
+  .element-container {
     display: flex;
-    width: 65rem;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-
-    .layer1 {
+    .services-number {
       display: flex;
-      justify-content: center;
+      width: fit-content;
+      height: 15rem;
+
+      justify-content: space-around;
       align-items: center;
-      width: 60px;
-      height: 60px;
-      background-color: $primary-color;
-      border-radius: 100%;
-      font-family: $primary-font;
-      font-size: 30px;
-      font-weight: 600;
-    }
+      overflow: hidden;
 
-    .layer2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 90px;
-      height: 90px;
-      border-radius: 100%;
-      border: 15px solid rgba(255, 77, 36, 0.7);
-    }
-
-    .layer3 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 120px;
-      height: 120px;
-      border-radius: 100%;
-      border: 15px solid rgba(255, 77, 36, 0.5);
-    }
-
-    .dash-line {
-      width: 18rem;
-      border: 1px dashed $primary-color;
-      opacity: 0.6;
-    }
-  }
-
-  .services-content {
-    display: flex;
-    width: 73rem;
-    justify-content: space-between;
-    margin-bottom: 5rem;
-    .service1 {
-      width: 15rem;
-      text-align: center;
-
-      .sub-head {
-        font-size: 25px;
-        color: $primary-color;
-        margin-bottom: 10px;
+      .layer1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: $primary-color;
+        border-radius: 100%;
+        font-family: $primary-font;
+        font-size: 15px;
       }
 
-      p {
-        font-size: 15px;
-        line-height: 1.5;
-        font-family: $secondary-font;
-        color: gray;
+      .layer2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 15px solid rgba(255, 77, 36, 0.6);
+      }
+
+      .layer3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: 15px solid rgba(255, 77, 36, 0.4);
+      }
+
+      .layer3:nth-child(1) {
+        margin-left: 20px;
+      }
+
+      .ma {
+        margin-right: 2rem;
+      }
+      .dash-line {
+        width: 16rem;
+        border: 1px dashed $primary-color;
+        opacity: 0.6;
+        margin: 0 2rem;
+      }
+    }
+
+    .services-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5rem;
+      .service1 {
+        margin-left: 2rem;
+
+        .sub-head {
+          text-align: center;
+          font-size: 25px;
+          color: $primary-color;
+          margin-bottom: 10px;
+        }
+
+        p {
+          text-align: center;
+          width: 20rem;
+          font-size: 18px;
+          line-height: 1.5;
+          font-family: $secondary-font;
+          color: gray;
+        }
       }
     }
   }
 
   .service-list-container {
     display: flex;
-    width: 66rem;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 4rem;
+    justify-content: center;
+    align-content: center;
     .service-list-item {
       width: 15rem;
       background-color: $section-background;
+      margin-left: 3rem;
       border-radius: 6px;
+      margin-bottom: 25px;
       .service-list-text {
         padding: 16px;
         margin-top: -4rem;
@@ -116,6 +136,68 @@
           font-family: $secondary-font;
           font-size: 16px;
           letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  @include media("<desktop") {
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .element-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 30px;
+      .services-number {
+        flex-direction: column;
+        height: 500px;
+
+        .layer3 {
+          margin: 0 100px;
+        }
+
+        .layer3:nth-child(1) {
+          margin-left: 100px;
+        }
+        hr {
+          display: none;
+        }
+      }
+      .services-content {
+        flex-direction: column;
+        padding-right: 20px;
+        .service1 {
+          margin: 0;
+
+          .sub-head {
+            text-align: unset;
+          }
+          p {
+            text-align: left;
+            width: fit-content;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    
+  }
+
+  @include media("<desktop") {
+    .service-list-container {
+      width: 100%;
+      padding: 0;
+      .service-list-item {
+        width: 80%;
+        margin: 0 20px;
+        margin-bottom: 40px;
+
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }

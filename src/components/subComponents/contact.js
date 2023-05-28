@@ -43,7 +43,12 @@ const Contact = () => {
               <div className="email-address">
                 <label htmlFor="email">email address</label>
                 <br />
-                <input type="text" placeholder="your email" /> <br />
+                <input
+                  type="text"
+                  placeholder="your email"
+                  className="ma"
+                />{" "}
+                <br />
               </div>
             </div>
             <label htmlFor="message">message</label>

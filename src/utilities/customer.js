@@ -23,7 +23,9 @@ const Customer = ({ customer }) => {
         <div className="arrow arrow-left" onClick={previousCustomerHandler}>
           <ArrowCircleLeft size={50} weight="thin" />
         </div>
-        <img src={customer[currentValue].image} alt="customers" />
+        <div className="img-wrapper">
+          <img src={customer[currentValue].image} alt="customers" />
+        </div>
         <div className="arrow arrow-right" onClick={nextCustomerHandler}>
           <ArrowCircleRight size={50} weight="thin" />
         </div>

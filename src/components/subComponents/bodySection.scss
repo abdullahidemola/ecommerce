@@ -4,30 +4,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // position: absolute;
-  // top: 58rem;
   align-items: center;
   margin-bottom: 2rem;
   margin-top: -2rem;
+  width: 100%;
 
   .service-section {
     display: flex;
-    width: 80rem;
-    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
     .section {
-      width: 25rem;
-      // height: 26rem;
+      margin-right: 32px;
       color: white;
       background-color: $section-background;
       border-radius: 1.5rem;
       padding: 30px;
+      max-width: 25rem;
+      margin-bottom: 32px;
 
       h2 {
         font-family: $primary-font;
         text-transform: uppercase;
         padding: 8px 0;
       }
+
+      
 
       .button {
         width: 10rem;
@@ -70,13 +73,12 @@
   }
 
   .why-us-container {
-    width: 80rem;
-    // height: rem;
+    max-width: 80rem;
     color: #fff;
     display: flex;
     margin-top: 6rem;
     .why-us {
-      max-width: 20rem;
+      max-width: 30rem;
       margin-right: 2.5rem;
 
       h1 {
@@ -88,6 +90,7 @@
         margin-bottom: 3rem;
       }
       p {
+        width: fit-content;
         font-size: 20px;
         line-height: 1.5;
       }
@@ -126,7 +129,7 @@
     }
 
     .why-us-text {
-      max-width: 52rem;
+
       h1 {
         width: fit-content;
         text-transform: uppercase;
@@ -146,6 +149,67 @@
         font-size: 20px;
         line-height: 1.5;
         margin: 20px 0;
+      }
+    }
+  }
+
+  @include media("<=1086px") {
+    .service-section {
+      display: flex;
+      flex-wrap: wrap;
+
+      .section {
+        margin-bottom: 20px;
+      }
+    }
+
+    .why-us-container {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+
+      .why-us {
+        margin-bottom: 50px;
+      }
+      .why-us-text {
+        h1 {
+          line-height: 1;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  @include media("<=tablet") {
+    .service-section {
+      width: 100%;
+      .section {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+
+    .why-us-container {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 20px;
+      .why-us {
+        width: 100%;
+        margin-bottom: 50px;
+        p {
+          width: 100%;
+        }
+      }
+
+      .why-us-text {
+        width: 100%;
+        h1 {
+          line-height: 1;
+          margin-bottom: 25px;
+        }
       }
     }
   }

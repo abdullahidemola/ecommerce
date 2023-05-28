@@ -1,12 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
+import { gsap } from "gsap";
+
 import Button from "../../utilities/Button";
 import { ArrowRight, Robot, GearSix, UsersThree } from "phosphor-react";
 import "./bodySection.scss";
+
+import useIntersection from "../../hooks/intersectionHook";
 
 const BodySection = () => {
   const [firstValid, setFirstValid] = useState(false);
   const [secondValid, setSecondValid] = useState(false);
   const [thirdValid, setThirdValid] = useState(false);
+
+  const [targetRef, isIntersecting] = useIntersection(0.2, "0px");
+
+  const fadeIn = (el) => {
+    gsap.to(el, {
+      duration: 3,
+      opacity: 1,
+      ease: "power2.out",
+      stagger: { amount: 0.3 },
+    });
+  };
+
+  const fadeOut = (el) => {
+    gsap.to(el, {
+      duration: 3,
+      opacity: 0,
+      ease: "power2.out",
+    });
+  };
+
+  // isIntersecting ? fadeIn(".fade") : fadeOut(".fade");
 
   const onClickHandler = (event) => {
     console.log(event.target.id);
@@ -28,50 +54,50 @@ const BodySection = () => {
   };
 
   return (
-    <div className="services-section-container">
-      <div className="service-section">
-        <div className="performance-check section">
+    <div className="services-section-container" ref={targetRef}>
+      <div className="service-section ">
+        <div className="performance-check section ">
           <div className="engine">
             <Robot size={36} weight="bold" />
           </div>
-          <h2>performance check</h2>
-          <p>
+          <h2 classname="fade">performance check</h2>
+          <p classname="fade">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste rem
             impedit dolore!
           </p>
-          <Button>
+          <Button className="fade">
             <div className="text">read more </div>
             <div className="arrow">
               <ArrowRight size={18} weight="bold" />
             </div>
           </Button>
         </div>
-        <div className="auto-repair section">
+        <div className="auto-repair section ">
           <div className="gear">
             <GearSix size={36} weight="bold" />
           </div>
-          <h2>auto repair</h2>
-          <p>
+          <h2 classname="fade">auto repair</h2>
+          <p classname="fade">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis,
             deserunt?
           </p>
-          <Button>
+          <Button className="fade">
             <div className="text">read more </div>
             <div className="arrow">
               <ArrowRight size={18} weight="bold" />
             </div>
           </Button>
         </div>
-        <div className="fleet-service section">
+        <div className="fleet-service section ">
           <div className="group">
             <UsersThree size={36} weight="bold" />
           </div>
-          <h2>fleet service</h2>
-          <p>
+          <h2 classname="fade">fleet service</h2>
+          <p classname="fade">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam,
             debitis! Obcaecati!
           </p>
-          <Button>
+          <Button className="fade">
             <div className="text">read more </div>
             <div className="arrow">
               <ArrowRight size={18} weight="bold" />
@@ -80,7 +106,7 @@ const BodySection = () => {
         </div>
       </div>
 
-      <div className="why-us-container">
+      <div className="why-us-container fade">
         <div className="why-us">
           <h1>why us?</h1>
           <p>
@@ -120,7 +146,7 @@ const BodySection = () => {
           {secondValid && (
             <p>
               Regular quality checks make sure our standards are maintained.
-              These form the basis for our efforts to carry on improving – with
+              These form the basis for our efforts to carry on improving - with
               particular emphasis on training and qualifications.
             </p>
           )}

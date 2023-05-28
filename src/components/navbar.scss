@@ -1,6 +1,6 @@
 @import "../styles/variables.scss";
+
 .navbar-container {
-  background-color: #000000;
   width: 100vw;
   height: 6rem;
   display: flex;
@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
+
   .navbar-title h1 {
     text-transform: uppercase;
     font-family: $primary-font;
@@ -15,16 +16,14 @@
   }
 
   .navbar-elements {
-    width: 32rem;
-    // background-color: antiquewhite;
-    div {
+    width: 30rem;
+    .navbar-element-container {
       display: flex;
       align-items: center;
       justify-content: center;
       justify-content: space-around;
 
       span {
-        // padding-top: 3rem;
         list-style-type: none;
         font-family: $secondary-font;
         font-size: larger;
@@ -42,22 +41,22 @@
   }
 
   .contact-section {
-    // background-color: bisque;
-    // width: 30rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-family: $secondary-font;
     font-size: larger;
     .number {
       letter-spacing: 1px;
     }
-    .cart {
+    .cart-center {
       display: flex;
       align-items: center;
-      justify-content: center;
       color: $primary-color;
       padding-inline: 18px;
+    }
+    .list {
+      color: $primary-color;
     }
     .button {
       width: 12rem;
@@ -71,6 +70,53 @@
       padding-inline: 0;
       letter-spacing: 1px;
       opacity: 0.85;
+    }
+  }
+
+  @include media("<=tablet") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    .navbar-elements {
+      display: none;
+    }
+    .contact-section {
+      .number {
+        display: none;
+      }
+      .btn-nav {
+        display: none;
+      }
+      .cart {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  @include media(">769px") {
+    .contact-section {
+      .list {
+        display: none;
+      }
+    }
+  }
+
+  @include media("<1500px") {
+    .navbar-title h1 {
+      font-size: 30px;
+      font-weight: 800;
+    }
+    .navbar-elements {
+
+      .navbar-element-container {
+        font-size: 12px;
+      }
+    }
+    .contact-section {
+      .number {
+        display: none;
+      }
     }
   }
 }

@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+
 .image-background {
   background: url("../../images/pexels-cottonbro-studio-4488639.jpg")
     center/cover no-repeat;
@@ -7,26 +8,31 @@
   display: flex;
   justify-content: center;
 
-  align-items: center;
   .body-content {
     color: white;
     margin: 0 16em;
     font-family: $primary-font;
     width: 80rem;
+    overflow: hidden;
+    padding-top: 8rem;
+    margin: 0 auto;
 
-    .body-header h1 {
-      text-transform: uppercase;
-      font-size: 60px;
-      font-weight: 700;
-      line-height: 110%;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
+    .body-header {
+      h1 {
+        text-transform: uppercase;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 110%;
+        width: fit-content;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+      }
     }
 
     p {
       font-family: $secondary-font;
       margin-bottom: 40px;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     .button {
@@ -51,6 +57,7 @@
         font-weight: 300;
         letter-spacing: 1.5px;
       }
+
       .arrow {
         width: 28px;
         height: 28px;
@@ -64,26 +71,54 @@
     .icons {
       display: flex;
       width: 100%;
-      // justify-content: space-between;
-      // align-items: center;
-
+      justify-content: space-between;
       span {
         font-size: 25px;
         text-transform: capitalize;
       }
+
       .car,
       .wrench,
       .swap,
       .firstaid {
         display: flex;
-        justify-content: center;
         align-items: center;
+        width: 300px;
       }
-      .wrench {
-        padding-inline: 4rem;
+    }
+  }
+
+  @include media("<=tablet") {
+  
+    padding-top: 50px;
+    padding-left: 4px;
+    .body-content {
+      padding: 0;
+      width: 100%;
+      margin: 0 auto;
+      .body-header h1 {
+        font-size: 35px;
+        font-weight: 800;
       }
-      .firstaid {
-        padding-inline: 4rem;
+      .anime-button {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
+
+      .icons {
+        display: flex;
+        flex-wrap: wrap;
+        .car,
+        .wrench,
+        .swap,
+        .firstaid {
+          width: fit-content;
+          margin-bottom: 25px;
+        }
+        .ma {
+          margin-right: 15px;
+        }
       }
     }
   }

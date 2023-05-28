@@ -3,19 +3,27 @@
 .contact-container {
   color: #fff;
   margin-bottom: 2rem;
-  //   border: 1px solid red;
+  width: 100%;
   .form-and-text {
     display: flex;
+    width: 100%;
+    justify-content: center;
     form {
-      width: 50rem;
-      //   border: 1px solid red;
       border-radius: 12px;
       padding: 2rem;
       background-color: $section-background;
+      margin-right: 40px;
       .flex {
         display: flex;
         margin-bottom: 2rem;
         justify-content: space-between;
+
+        .name,
+        .phone,
+        .email-address,
+        .car-model {
+          margin-right: 1.5rem;
+        }
       }
       label {
         text-transform: capitalize;
@@ -25,16 +33,15 @@
       }
 
       input {
-        width: 350px;
+        width: 100%;
         height: 60px;
         border-radius: 10px;
-        // border: none;
         background: transparent;
         border: 1px solid #606265;
-        padding-left: 10px;
         color: $primary-color;
-        margin-right: 4rem;
         margin-top: 1rem;
+        margin-right: 15rem;
+        padding-left: 2rem;
       }
 
       ::-webkit-input-placeholder {
@@ -74,7 +81,6 @@
   .appointment {
     width: 23rem;
     margin-left: 2rem;
-    // border: 1px solid red; 
     margin-right: 1rem;
     h2 {
       font-family: $primary-font;
@@ -132,12 +138,12 @@
     }
   }
 
-  footer {
-    width: 98%;
+  .footer {
+    max-width: 79rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 4rem 0;
+    margin: 4rem auto;
     h1 {
       cursor: pointer;
       font-family: $primary-font;
@@ -146,7 +152,8 @@
     }
     ul {
       display: flex;
-      width: 50%;
+      width: 60%;
+
       justify-content: space-between;
 
       li {
@@ -156,6 +163,90 @@
         font-size: 20px;
         letter-spacing: 1px;
         text-transform: capitalize;
+      }
+    }
+  }
+
+  @include media("<1260px") {
+    .form-and-text {
+      .form {
+        form {
+          max-width: 40rem;
+
+          input {
+            width: 260px;
+          }
+          textarea {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  @include media("<1000px") {
+    margin-top: 4rem;
+    padding: 0;
+    .form-and-text {
+      flex-wrap: wrap;
+
+      .form {
+        width: 100%;
+
+        form {
+          width: 100%;
+
+          input {
+            width: 100%;
+          }
+        }
+        margin-bottom: 40px;
+      }
+      .appointment {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .footer {
+      flex-direction: column;
+      ul {
+        margin-top: 40px;
+        width: 80%;
+      }
+    }
+  }
+
+  @include media("<=tablet") {
+    .footer {
+      flex-direction: column;
+      ul {
+        width: 100%;
+        grid-column-gap: 90px;
+        grid-row-gap: 40px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  @include media("<=640px") {
+    .form-and-text {
+      .form {
+        width: 100%;
+        form {
+          .flex {
+            flex-direction: column;
+            .name,
+            .car-model {
+              margin-bottom: 32px;
+            }
+          }
+          input {
+            width: 100%;
+          }
+          textarea {
+            width: 100%;
+          }
+        }
       }
     }
   }

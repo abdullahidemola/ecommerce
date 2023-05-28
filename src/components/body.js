@@ -1,5 +1,6 @@
 import React from "react";
 import "./body.scss";
+
 import Home from "./subComponents/home";
 import BodySection from "./subComponents/bodySection";
 import BodySection2 from "./subComponents/bodySection2";

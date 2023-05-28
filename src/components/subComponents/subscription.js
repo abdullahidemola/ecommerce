@@ -80,7 +80,7 @@ const Subscription = () => {
             </div>
             <span className="service-text">wheels/tires balancing</span>
           </div>
-
+          
           <div className="service service3">
             <div className="check">
               <Check size={25} weight="bold" />

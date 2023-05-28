@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap");
+
+@import "../breakpoint/breakpoint.scss";
 
 $primary-font: "Oxanium", sans-serif;
 $secondary-font: "Sarabun", sans-serif;

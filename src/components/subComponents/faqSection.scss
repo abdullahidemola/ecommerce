@@ -4,12 +4,10 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   background-color: $section-background;
   width: 100%;
-  padding-top: 4rem;
-  height: 1600px;
+  padding: 6rem 0;
 
   .faq-section {
     display: flex;
@@ -17,8 +15,6 @@
     margin-bottom: 6rem;
 
     .faq-news {
-      width: 30rem;
-
       h1 {
         font-family: $primary-font;
         font-size: 40px;
@@ -29,10 +25,15 @@
         margin-top: 1rem;
         font-family: $secondary-font;
         font-size: 18px;
+        width: 30rem;
       }
-      img {
+      .image-faq {
         margin-top: 2rem;
         border-radius: 12px;
+      }
+      img {
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -43,6 +44,7 @@
 
       .overlay {
         cursor: pointer;
+        overflow: hidden;
       }
       .text {
         width: 100%;
@@ -65,16 +67,26 @@
           }
         }
 
-        .icon {
+        .icon-container {
+          overflow: hidden;
           pointer-events: none;
-          &.active {
-            color: $primary-color;
+
+          .icon {
+            overflow: hidden;
+            &.active {
+              color: $primary-color;
+            }
           }
         }
       }
       .answer {
         font-family: $secondary-font;
         font-size: 16px;
+        width: fit-content;
+
+        &.active {
+          display: contents;
+        }
       }
 
       hr {
@@ -83,8 +95,6 @@
     }
   }
   .specialist {
-    // margin-bottom: 4rem; 
-    // width: 63%;
     h1 {
       text-transform: uppercase;
       font-family: $primary-font;
@@ -93,7 +103,6 @@
     }
     .img-section {
       display: flex;
-      // width: 63%;
       .img-wrapper {
         img {
           width: 270px;
@@ -117,6 +126,44 @@
           font-size: 16px;
           color: gray;
           line-height: 150%;
+        }
+      }
+    }
+  }
+
+  @include media("<1126px") {
+    .faq-section {
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      .faq-news {
+        width: 100%;
+        margin-bottom: 30px;
+        p {
+          width: 100%;
+        }
+        .image-faq {
+          width: 90%;
+          height: auto;
+        }
+      }
+      .fa-questions {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    .specialist {
+      .img-section {
+        flex-wrap: wrap;
+        justify-content: center;
+        .img-wrapper {
+          margin-bottom: 32px;
+          img {
+            width: 100%;
+            height: auto;
+            margin-right: 30px;
+          }
         }
       }
     }
