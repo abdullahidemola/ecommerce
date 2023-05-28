@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ecommerce/static/css/main.100b2b23.css",
+    "main.js": "/ecommerce/static/js/main.a71013f1.js",
+    "static/media/pexels-cottonbro-studio-4488639.jpg": "/ecommerce/static/media/pexels-cottonbro-studio-4488639.bfdde05cc878dfe660da.jpg",
+    "static/media/GUY HAWKINS-p-500.jpg": "/ecommerce/static/media/GUY HAWKINS-p-500.ab6199020d0817420024.jpg",
+    "static/media/Kristin Watson.jpg": "/ecommerce/static/media/Kristin Watson.2df84edb23b8aa3bee17.jpg",
+    "static/media/Retro Car.jpg": "/ecommerce/static/media/Retro Car.1b49df037770519aa320.jpg",
+    "static/media/Engine.jpg": "/ecommerce/static/media/Engine.4d2d2b17824a0bf2fbc5.jpg",
+    "static/media/Schedule.jpg": "/ecommerce/static/media/Schedule.26f6b61ebc6242209c60.jpg",
+    "static/media/Jacob Jones-p-500.jpg": "/ecommerce/static/media/Jacob Jones-p-500.927175be18c5e4a4a048.jpg",
+    "static/media/BROOKLYN SIMMONS-p-500.jpg": "/ecommerce/static/media/BROOKLYN SIMMONS-p-500.4acb738eaadab22898aa.jpg",
+    "static/media/Carla Bernis.jpg": "/ecommerce/static/media/Carla Bernis.bec6d38aa75974952a6c.jpg",
+    "static/media/Detailing.jpg": "/ecommerce/static/media/Detailing.fa523e4a950d88dd90ee.jpg",
+    "static/media/Brandon Renzo.jpg": "/ecommerce/static/media/Brandon Renzo.705fc00b81cc2c828bbe.jpg",
+    "static/media/Painting.jpg": "/ecommerce/static/media/Painting.acafa32643fcbc308dfa.jpg",
+    "static/media/ROBERT FOX.jpg": "/ecommerce/static/media/ROBERT FOX.0ac4d2b128a002a134d9.jpg",
+    "index.html": "/ecommerce/index.html",
+    "main.100b2b23.css.map": "/ecommerce/static/css/main.100b2b23.css.map",
+    "main.a71013f1.js.map": "/ecommerce/static/js/main.a71013f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.100b2b23.css",
+    "static/js/main.a71013f1.js"
+  ]
+}
